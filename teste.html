@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cineflix</title>
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/regular.min.css"
+      integrity="sha512-EbT6icebNlvxlD4ECiLvPOVBD0uQdt4pHRg8Gpkfirdu9W8l2rtRZO8rThjqeIK08ubcFeiFKHbek7y+lEbWIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+      integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- SLIDER -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  </head>
+
+  <style>
+    body {
+      background-image: url(img/bg-sign.jpg);
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .bars-nav {
+      color: white;
+      font-size: 25px;
+    }
+  </style>
+  <body>
+    <div class="bars-nav"><i class="fa-solid fa-bars"></i></div>
+
+    <div class="menu-collapse">
+      <div class="profile">
+        <div id="barsMenu2" class="bars-nav">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <img src="img/default-profile.jpeg" alt="Profile Name" class="photo" />
+        <div>
+          <h3>Username</h3>
+          <p>Switch Profiles</p>
+        </div>
+      </div>
+      <div class="list">
+        <a href="#"> <i class="fa-solid fa-window-restore"></i> Browse</a>
+        <a href="#"> <i class="fa-solid fa-magnifying-glass"></i> Search</a>
+        <a href="#"> <i class="fa-solid fa-check"></i> My List</a>
+      </div>
+      <div class="footer">
+        <a href="#">Settings</a>
+        <a href="#">Exit</a>
+      </div>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

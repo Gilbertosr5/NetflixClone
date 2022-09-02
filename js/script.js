@@ -2,13 +2,25 @@ const btnMenu = document.querySelector(".bars-nav");
 const btnMenu2 = document.querySelector("#barsMenu2");
 const menuCollapse = document.querySelector(".menu-collapse");
 
-btnMenu.addEventListener("click", () => {
-  menuCollapse.classList.toggle("active");
-});
-btnMenu2.addEventListener("click", () => {
-  menuCollapse.classList.toggle("active");
+const btnSearch = document.querySelector(".search");
+const searchArea = document.querySelector(".search-area");
+
+btnSearch.addEventListener("click", () => {
+  searchArea.classList.toggle("active");
+  btnSearch.classList.toggle("hide");
 });
 
+btnMenu.addEventListener("click", () => {
+  menuCollapse.classList.toggle("active");
+  menuCollapse.classList.toggle("disable");
+});
+
+btnMenu2.addEventListener("click", () => {
+  menuCollapse.classList.toggle("active");
+  menuCollapse.classList.toggle("disable");
+});
+
+// Card Slide
 if (window.matchMedia("(min-width: 730px)").matches) {
   /* viewport de Note */
   var swiper = new Swiper(".mySwiper", {

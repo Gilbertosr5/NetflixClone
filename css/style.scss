@@ -154,6 +154,57 @@ body.login {
   cursor: pointer;
 }
 
+.search.hide {
+  opacity: 0;
+}
+
+.search-area {
+  width: 0%;
+  height: 40px;
+  transform: translateX(25px);
+  display: none;
+  opacity: 0;
+  margin-right: 20px;
+
+  input {
+    height: 100%;
+    width: 85%;
+    border-radius: 20px 0 0 20px;
+    padding: 0 15px;
+    color: #363636;
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  input:focus,
+  input:hover {
+    outline-style: outset;
+    outline-width: 1px;
+    outline-color: black;
+  }
+
+  button {
+    flex: 1;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+    transition: background 0.5s;
+  }
+
+  button:hover {
+    background-color: $primary-color-hover;
+  }
+}
+
+.search-area.active {
+  @include flex-between;
+  animation-name: searchAreaIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
 .menu-collapse {
   display: none;
   position: fixed;
@@ -351,5 +402,12 @@ body.login {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes searchAreaIn {
+  to {
+    opacity: 1;
+    width: 60%;
   }
 }

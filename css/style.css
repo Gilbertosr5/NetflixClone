@@ -141,6 +141,58 @@ body.login {
   cursor: pointer;
 }
 
+.search.hide {
+  opacity: 0;
+}
+
+.search-area {
+  width: 0%;
+  height: 40px;
+  transform: translateX(25px);
+  display: none;
+  opacity: 0;
+  margin-right: 20px;
+}
+.search-area input {
+  height: 100%;
+  width: 85%;
+  border-radius: 20px 0 0 20px;
+  padding: 0 15px;
+  color: #363636;
+  font-weight: 300;
+  font-size: 15px;
+}
+.search-area input:focus,
+.search-area input:hover {
+  outline-style: outset;
+  outline-width: 1px;
+  outline-color: black;
+}
+.search-area button {
+  flex: 1;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.search-area button:hover {
+  background-color: #f50e1a;
+}
+
+.search-area.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-animation-name: searchAreaIn;
+          animation-name: searchAreaIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .menu-collapse {
   display: none;
   position: fixed;
@@ -318,5 +370,17 @@ body.login {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@-webkit-keyframes searchAreaIn {
+  to {
+    opacity: 1;
+    width: 60%;
+  }
+}
+@keyframes searchAreaIn {
+  to {
+    opacity: 1;
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */
